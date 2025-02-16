@@ -11,10 +11,10 @@ void test_create_token() {
 	t_token token;
 	token.funct = &token_funct;
 	token.str_representation = "hola";
-	token.token_type = TOKEN_C;
+	token.token_type = TOKEN_CHAR;
 	token.value = (void *) "Hola";
 
-	t_token token2 = *create_token(TOKEN_C, "hola", (void *) "Hola", &token_funct);
+	t_token token2 = *create_token(TOKEN_CHAR, "hola", (void *) "Hola", &token_funct);
 
     TEST_ASSERT_EQUAL(token.funct, token2.funct);
 	TEST_ASSERT_EQUAL(token.str_representation, token2.str_representation);
@@ -24,7 +24,7 @@ void test_create_token() {
 
 void test_destruct_token() {
 
-	t_token *token = create_token(TOKEN_C, "hola", (void *) "Hola", &token_funct);
+	t_token *token = create_token(TOKEN_CHAR, "hola", (void *) "Hola", &token_funct);
 	//destruct_token(token);
 }
 

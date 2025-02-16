@@ -24,7 +24,7 @@ t_token *token_factory(char *str_representation, void *value)
 	if(!value)
 	{
 		if(is_print_str(str_representation))
-			return (create_token(str_representation, get_funct_from_type(TOKEN_S)));
+			return (create_token(str_representation, get_funct_from_type(TOKEN_STR)));
 		return (NULL);
 	}
 	type = get_type_from_representation(str_representation);

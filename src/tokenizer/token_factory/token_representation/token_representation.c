@@ -4,14 +4,14 @@
 t_str_representation *get_representations()
 {
     static t_str_representation token_representations[] = {
-        {TOKEN_C, "%c"},
-        {TOKEN_S, "%s"},
-        {TOKEN_P, "%p"},
-        {TOKEN_D, "%d"},
-        {TOKEN_I, "%i"},
-        {TOKEN_U, "%u"},
-        {TOKEN_X, "%x"},
-        {TOKEN_XX, "%X"},
+        {TOKEN_CHAR, "%c"},
+        {TOKEN_STR, "%s"},
+        {TOKEN_PTR, "%p"},
+        {TOKEN_FLOATING_POINT_DEC, "%d"},
+        {TOKEN_INTEGER, "%i"},
+        {TOKEN_UNSIGNED_INTEGER, "%u"},
+        {TOKEN_LOWCASE_HEX, "%x"},
+        {TOKEN_UPCASE_HEX, "%X"},
         {TOKEN_PERCENTAGE, "%%"}
     };
     return token_representations;
@@ -44,7 +44,7 @@ e_token_types get_type_from_representation(char *representation)
 	}
 	if(ft_isprint_str(representation))
 	{
-		return (TOKEN_S);
+		return (TOKEN_STR);
 	}
 	return (NULL);
 }

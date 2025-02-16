@@ -4,14 +4,14 @@
 t_token_funct *get_functs()
 {
     static t_token_funct token_functs[] = {
-		{TOKEN_C, &print_char},
-		{TOKEN_S, &print_str},
-		{TOKEN_P, &print_ptr},
-		{TOKEN_D, &print_dec},
-		{TOKEN_I, &print_int},
-		{TOKEN_U, &print_unsigned_int},
-		{TOKEN_X, &print_lowcase_hex},
-		{TOKEN_XX, &print_uppercase_hex},
+		{TOKEN_CHAR, &print_char},
+		{TOKEN_STR, &print_str},
+		{TOKEN_PTR, &print_ptr},
+		{TOKEN_FLOATING_POINT_DEC, &print_dec},
+		{TOKEN_INTEGER, &print_int},
+		{TOKEN_UNSIGNED_INTEGER, &print_unsigned_int},
+		{TOKEN_LOWCASE_HEX, &print_lowcase_hex},
+		{TOKEN_UPCASE_HEX, &print_uppercase_hex},
 		{TOKEN_PERCENTAGE, &print_percentage},
     };
     return token_functs;
