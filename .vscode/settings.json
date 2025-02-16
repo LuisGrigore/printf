@@ -1,0 +1,25 @@
+{
+	"files.associations": {
+		"parser.h": "c",
+		"tokenizer.h": "c",
+		"token_util_chars_functs.h": "c",
+		"stdlib.h": "c",
+		"bit": "cpp",
+		"compare": "cpp",
+		"concepts": "cpp",
+		"cmath": "cpp",
+		"limits": "cpp",
+		"new": "cpp",
+		"type_traits": "cpp",
+		"token_factory.h": "c",
+		"libft.h": "c",
+		"stdio.h": "c",
+		"printf.h": "c",
+		"unity.h": "c",
+		"string_separator.h": "c",
+		"token_representation.h": "c",
+		"token_list.h": "c",
+		"token_util_functs.h": "c",
+		"token.h": "c"
+	}
+}

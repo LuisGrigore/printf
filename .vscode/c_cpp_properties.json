@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src/token",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_functs/token_util_functs/chars_functs",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_functs/token_util_functs/num_functs",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_functs/token_util_functs/extra_functs",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_functs",
+                "${workspaceFolder}/src/tokenizer/string_separator"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64"
+        },
+        {
+            "name": "lin",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
