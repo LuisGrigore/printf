@@ -1,6 +1,6 @@
 #include "puthex_with_charset.h"
 
-void write_hex_with_charset(unsigned long num, int fd, char * charset)
+void puhex_with_charset(unsigned long num, int fd, char * charset)
 {
     char hex_chars[] = charset;
     char buffer[16];

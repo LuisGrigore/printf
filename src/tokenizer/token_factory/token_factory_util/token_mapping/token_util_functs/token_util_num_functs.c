@@ -1,4 +1,5 @@
 #include "token_util_functs.h"
+#include "puthex_with_charset.h"
 #include <stdio.h>
 #include "libft.h"
 
@@ -29,13 +30,31 @@ void print_int(void *i)
 }
 void print_unsigned_int(void *i)
 {
-	//TODO
+	unsigned int ui = (unsigned int) i;
+	ft_putui_fd(ui,1);
 }
+static void	ft_putui_fd(unsigned int n, int fd)
+{
+	char	buffer[12];
+	int		i;
+
+	i = 11;
+	buffer[i] = '\0';
+	while (n > 0)
+	{
+		buffer[--i] = (n % 10) + '0';
+		n /= 10;
+	}
+	write(fd, &buffer[i], 11 - i);
+}
+
 void print_lowcase_hex(void *x)
 {
-	//TODO
+	unsigned long *hex = (unsigned long) x;
+	puhex_with_charset(*hex, 1, HEX_LOWCASE_CHARSET);
 }
 void print_uppercase_hex(void *xx)
 {
-	//TODO
+	unsigned long *hex = (unsigned long) xx;
+	puhex_with_charset(*hex, 1, HEX_UPPCASE_CHARSET);
 }

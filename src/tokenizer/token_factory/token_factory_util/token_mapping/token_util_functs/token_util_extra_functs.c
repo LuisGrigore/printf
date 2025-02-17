@@ -1,5 +1,4 @@
 #include "token_util_functs.h"
-#include "charsets_config.h"
 #include "puthex_with_charset.h"
 #include "libft.h"
 
@@ -11,5 +10,5 @@ void print_percentage(void *percentage)
 void print_ptr(void *p)
 {
 	ft_putstr_fd("0x",1);
-    write_hex_with_charset((unsigned long)p, 1, HEX_LOWCASE_CHARSET);
+    puhex_with_charset((unsigned long)p, 1, HEX_LOWCASE_CHARSET);
 }
