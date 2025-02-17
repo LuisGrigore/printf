@@ -1,4 +1,10 @@
 #ifndef PRECISIONS_CONFIG
 # define PRECISIONS_CONFIG
 
+
+#ifndef DOUBLE_PRECISION
+# define DOUBLE_PRECISION 20
+#endif
+
+
 #endif

@@ -1,5 +1,6 @@
 #include "token_util_functs.h"
 #include "puthex_with_charset.h"
+#include "precisions_config.h"
 #include "file_desc_config.h"
 #include <stdio.h>
 #include "libft.h"

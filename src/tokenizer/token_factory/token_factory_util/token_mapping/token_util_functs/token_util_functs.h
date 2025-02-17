@@ -1,10 +1,5 @@
 #ifndef TOKEN_UTIL_FUNCTS
 #	define  TOKEN_UTIL_FUNCTS
-
-#ifndef DOUBLE_PRECISION
-# define DOUBLE_PRECISION 20
-#endif
-
 //Num Functs
 void print_dec(void *d);
 void print_int(void *i);
