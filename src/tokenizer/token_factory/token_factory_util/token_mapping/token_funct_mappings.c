@@ -2,7 +2,7 @@
 #include "token_util_functs.h"
 #include <stdlib.h>
 
-t_token_funct *get_functs()
+static t_token_funct *get_functs()
 {
     static t_token_funct token_functs[] = {
 		{TOKEN_CHAR, &print_char},

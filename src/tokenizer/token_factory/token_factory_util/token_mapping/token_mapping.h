@@ -9,8 +9,8 @@ typedef struct t_str_representation
 	char *str_representation;
 } t_str_representation;
 
-t_str_representation *get_representations();
-char *get_representation_from_type(e_token_types type);
+/*t_str_representation *get_representations();*/
+/*char *get_representation_from_type(e_token_types type);*/
 e_token_types get_type_from_representation(char *representation);
 
 
@@ -22,7 +22,6 @@ typedef struct t_token_funct
 	funct funct;
 } t_token_funct;
 
-t_token_funct *get_functs();
-
+/*t_token_funct *get_functs();*/
 funct get_funct_from_type(e_token_types type);
 #endif

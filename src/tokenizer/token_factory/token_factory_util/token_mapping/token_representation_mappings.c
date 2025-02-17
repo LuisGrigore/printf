@@ -1,7 +1,7 @@
 #include "token_mapping.h"
 #include <stdlib.h>
 
-t_str_representation *get_representations()
+static t_str_representation *get_representations()
 {
     static t_str_representation token_representations[] = {
         {TOKEN_CHAR, "%c"},
@@ -17,7 +17,7 @@ t_str_representation *get_representations()
     return token_representations;
 }
 
-char *get_representation_from_type(e_token_types type)
+/*char *get_representation_from_type(e_token_types type)
 {
 	int i;
 
@@ -28,7 +28,7 @@ char *get_representation_from_type(e_token_types type)
 			return (get_representations()[i].str_representation);
 	}
 	return (NULL);
-}
+}*/
 
 e_token_types get_type_from_representation(char *representation)
 {
