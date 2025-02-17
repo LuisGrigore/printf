@@ -9,7 +9,10 @@
                 "${workspaceFolder}/src/tokenizer/token_factory/token_functs/token_util_functs/num_functs",
                 "${workspaceFolder}/src/tokenizer/token_factory/token_functs/token_util_functs/extra_functs",
                 "${workspaceFolder}/src/tokenizer/token_factory/token_functs",
-                "${workspaceFolder}/src/tokenizer/string_separator"
+                "${workspaceFolder}/src/tokenizer/string_separator",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_functs/token_util_functs",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_util_functs",
+                "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_util_functs/puthex_with_charset"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
