@@ -1,0 +1,4 @@
+#ifndef PRECISIONS_CONFIG
+# define PRECISIONS_CONFIG
+
+#endif

@@ -1,0 +1,12 @@
+#ifndef CHARSETS_CONFIG
+# define CHARSETS_CONFIG
+
+#ifndef HEX_UPPCASE_CHARSET
+# define HEX_UPPCASE_CHARSET "0123456789ABCDEF"
+#endif
+
+#ifndef HEX_LOWCASE_CHARSET
+# define HEX_LOWCASE_CHARSET "0123456789abcdef"
+#endif
+
+#endif
