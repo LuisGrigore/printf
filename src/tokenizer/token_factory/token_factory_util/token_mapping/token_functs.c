@@ -1,5 +1,6 @@
-#include "token_functs.h"
+#include "token_mapping.h"
 #include "token_util_functs.h"
+#include <stdlib.h>
 
 t_token_funct *get_functs()
 {

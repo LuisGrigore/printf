@@ -1,6 +1,5 @@
 #include "token_factory.h"
-#include "token_representation.h"
-#include "token_functs.h"
+#include "token_mapping.h"
 #include <stdlib.h>
 
 static int is_print_str(char * str)

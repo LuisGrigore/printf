@@ -1,4 +1,4 @@
-#include "token_representation.h"
+#include "token_mapping.h"
 #include <stdlib.h>
 
 t_str_representation *get_representations()
