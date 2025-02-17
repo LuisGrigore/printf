@@ -1,7 +1,6 @@
-#include "token_util_num_functs.h"
+#include "token_util_functs.h"
 #include <stdio.h>
 #include "libft.h"
-#include "config.h"
 
 void print_dec(void *d)
 {

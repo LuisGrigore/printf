@@ -1,4 +1,4 @@
-#include "token_util_chars_functs.h"
+#include "token_util_functs.h"
 #include "libft.h"
 
 void print_char(void *c)

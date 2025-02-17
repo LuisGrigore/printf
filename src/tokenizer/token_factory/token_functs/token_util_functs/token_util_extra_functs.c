@@ -1,4 +1,4 @@
-#include "token_util_extra_functs.h"
+#include "token_util_functs.h"
 #include "libft.h"
 
 void print_percentage(void *percentage)
