@@ -1,4 +1,6 @@
 #include "string_separator.h"
+#include "token_mapping.h"
+#include "libft.h"
 #include <string.h>
 #include <stdlib.h>
 
@@ -24,7 +26,7 @@ void append_to_list(t_str_list **list, char *value) {
 
 t_str_list *separate_str(char *str) {
     t_str_list *result = NULL;
-    char *temp = strdup(str);
+    char *temp = ft_strdup(str);
     char *token_start = temp;
     int len;
     

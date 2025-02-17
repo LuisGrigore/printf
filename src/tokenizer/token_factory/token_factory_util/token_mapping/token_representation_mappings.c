@@ -32,7 +32,7 @@ static t_str_representation *get_representations()
 
 e_token_types get_type_from_representation(char *representation)
 {
-	int i;
+	unsigned long i;
 	char *current_representation;
 
 	i = 0;
@@ -46,5 +46,5 @@ e_token_types get_type_from_representation(char *representation)
 	{
 		return (TOKEN_STR);
 	}
-	return (NULL);
+	return (PLAIN_TEXT);
 }

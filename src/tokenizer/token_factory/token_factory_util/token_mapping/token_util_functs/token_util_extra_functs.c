@@ -5,7 +5,8 @@
 
 void print_percentage(void *percentage)
 {
-	ft_putchar_fd(PPERCENTAGE_SYMBOL, STDOUT_FD);
+	if(*(char *)percentage == '%')
+		ft_putchar_fd(PPERCENTAGE_SYMBOL, STDOUT_FD);
 }
 
 void print_ptr(void *p)

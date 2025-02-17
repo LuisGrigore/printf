@@ -20,7 +20,7 @@ static t_token_funct *get_functs()
 
 funct get_funct(e_token_types type)
 {
-	int i;
+	unsigned long i;
 
 	i = 0;
 	while (i < sizeof(get_functs()))

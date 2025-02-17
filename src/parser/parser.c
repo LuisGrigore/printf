@@ -8,7 +8,6 @@ void parse(t_token_list *tokens)
 
 	to_destroy = create_token_list();
 	consumed_token = consume(tokens);
-	int i = 0;
 	while (consumed_token != NULL)
 	{
 		consumed_token->funct(consumed_token->value);

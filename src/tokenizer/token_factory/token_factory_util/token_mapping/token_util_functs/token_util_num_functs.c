@@ -33,7 +33,7 @@ void print_int(void *integer_ptr)
 
 void print_unsigned_int(void *unsigned_integer_ptr)
 {
-	unsigned int unsigned_integer = (unsigned int) unsigned_integer_ptr;
+	unsigned int unsigned_integer = *(unsigned int *) unsigned_integer_ptr;
 	char	buffer[12];
 	int		i;
 
@@ -50,12 +50,12 @@ void print_unsigned_int(void *unsigned_integer_ptr)
 
 void print_lowcase_hex(void *x)
 {
-	unsigned long *hex = (unsigned long) x;
-	puhex_with_charset(*hex, STDOUT_FD, HEX_LOWCASE_CHARSET);
+	unsigned long hex = *(unsigned long*) x;
+	puhex_with_charset(hex, STDOUT_FD, HEX_LOWCASE_CHARSET);
 }
 
 void print_uppercase_hex(void *xx)
 {
-	unsigned long *hex = (unsigned long) xx;
-	puhex_with_charset(*hex, STDOUT_FD, HEX_UPPCASE_CHARSET);
+	unsigned long hex = *(unsigned long*) xx;
+	puhex_with_charset(hex, STDOUT_FD, HEX_UPPCASE_CHARSET);
 }

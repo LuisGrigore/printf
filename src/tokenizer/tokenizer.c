@@ -1,13 +1,7 @@
 #include "tokenizer.h"
 #include "string_separator.h"
+#include "token_mapping.h"
 #include "token_factory.h"
-
-static int is_plain_text(char *str)
-{
-	if (str[0] == ESCAPE_CHAR)
-		return (0);
-	return (1);
-}
 
 t_token_list *tokenize(char *str, va_list args)
 {
@@ -19,10 +13,11 @@ t_token_list *tokenize(char *str, va_list args)
 	token_list = create_token_list();
     if (!token_list)
         return (NULL);
+	
 	str_list = separate_str(str);
 	while(str_list)
 	{
-		if(!is_plain_text(str_list->value[0]))
+		if(get_type_from_representation(str_list->value) == PLAIN_TEXT)
 		{
 			arg = va_arg(args, void*);
 			if (arg == END_ARGS)
