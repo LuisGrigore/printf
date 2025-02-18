@@ -9,7 +9,7 @@ typedef struct t_str_representation
 	char *str_representation;
 } t_str_representation;
 
-//t_str_representation *get_representations();
+t_str_representation *get_representations();
 //char *get_representation_from_type(e_token_types type);
 e_token_types get_type_from_representation(char *representation);
 

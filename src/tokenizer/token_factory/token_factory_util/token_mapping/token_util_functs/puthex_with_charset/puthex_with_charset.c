@@ -1,4 +1,5 @@
 #include "puthex_with_charset.h"
+#include "libft.h"
 
 void puhex_with_charset(unsigned long num, int fd, char * charset)
 {

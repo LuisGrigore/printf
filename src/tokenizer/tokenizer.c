@@ -11,8 +11,8 @@ t_token_list *tokenize(char *str, va_list args)
     t_token *new_token;
 
 	token_list = create_token_list();
-    if (!token_list)
-        return (NULL);
+    /*if (!token_list)
+        return (NULL);*/
 	
 	str_list = separate_str(str);
 	while(str_list)

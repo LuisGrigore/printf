@@ -1,7 +1,8 @@
 #include "token_mapping.h"
 #include <stdlib.h>
+#include "libft.h"
 
-static t_str_representation *get_representations()
+/*static*/ t_str_representation *get_representations()
 {
     static t_str_representation token_representations[] = {
         {TOKEN_CHAR, "%c"},
@@ -17,18 +18,16 @@ static t_str_representation *get_representations()
     return token_representations;
 }
 
-/*char *get_representation_from_type(e_token_types type)
+static int is_print_str(char *str)
 {
-	int i;
-
-	i = 0;
-	while (i < sizeof(get_representations()))
+	while(*str)
 	{
-		if(type == get_representations()[i].token_type)
-			return (get_representations()[i].str_representation);
+		if(!ft_isprint(*str))
+			return(0);
+		str++;
 	}
-	return (NULL);
-}*/
+	return (1);
+}
 
 e_token_types get_type_from_representation(char *representation)
 {
@@ -42,7 +41,7 @@ e_token_types get_type_from_representation(char *representation)
 		if(ft_strncmp(current_representation, representation, ft_strlen(current_representation)) == 0)
 			return (get_representations()[i].token_type);
 	}
-	if(ft_isprint_str(representation))
+	if(is_print_str(representation))
 	{
 		return (TOKEN_STR);
 	}

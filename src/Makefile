@@ -23,7 +23,7 @@ INCLUDE_FLAGS := $(addprefix -I, $(HDR_DIRS) $(EXT_HDR_DIRS))
 
 # Flags de enlace con librerías (-L y -l)
 LIB_DIRS := $(sort $(dir $(EXT_LIB_FILES)))
-LDFLAGS := $(addprefix -L, $(LIB_DIRS)) $(patsubst $(EXTERNALS_DIR)/lib%.a, -l%, $(EXT_LIB_FILES))
+LDFLAGS := $(addprefix -L, $(LIB_DIRS)) $(patsubst $(EXTERNALS_DIR), -l%, $(EXT_LIB_FILES))
 
 # Configuración del compilador
 CC := gcc
