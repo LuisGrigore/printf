@@ -3,7 +3,7 @@
 # Nombre del ejecutable generado por Makefile
 EXECUTABLE="bin/main"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BUILD_MAKE_DIR="./build"
+BUILD_MAKE_DIR="$SCRIPT_DIR/build"
 
 # Función para mostrar ayuda
 show_help() {
