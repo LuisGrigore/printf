@@ -1,7 +1,7 @@
 # Directorios principales
-SRC_DIR := .
-EXTERNALS_DIR := ../externals
-BUILD_DIR := ../target/build
+SRC_DIR := ../../src
+EXTERNALS_DIR := ../../externals
+BUILD_DIR := ../../target/build
 
 # Buscar archivos fuente y cabecera dentro de src
 SRC_FILES := $(shell find $(SRC_DIR) -type f -name "*.c")

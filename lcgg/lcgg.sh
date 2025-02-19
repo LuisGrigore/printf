@@ -2,6 +2,8 @@
 
 # Nombre del ejecutable generado por Makefile
 EXECUTABLE="bin/main"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BUILD_MAKE_DIR="./build"
 
 # Función para mostrar ayuda
 show_help() {
@@ -24,8 +26,12 @@ fi
 # Procesa el argumento
 case "$1" in
     -build)
-        echo "🔨 Compilando el proyecto..."
-        make build
+        echo "🧪 Ejecutando pruebas..."
+		cd $BUILD_MAKE_DIR
+        make
+		make copy_headers
+		make copy_libs
+		cd $SCRIPT_DIR
         ;;
     -run)
         echo "🚀 Ejecutando el programa..."
@@ -38,11 +44,17 @@ case "$1" in
         ;;
     -test)
         echo "🧪 Ejecutando pruebas..."
-        make test
+		cd $BUILD_MAKE_DIR
+        make
+		make copy_headers
+		make copy_libs
+		cd $SCRIPT_DIR
         ;;
     -clean)
         echo "🧹 Limpiando archivos de compilación..."
+		cd $BUILD_MAKE_DIR
         make clean
+		cd $SCRIPT_DIR
         ;;
     -help)
         show_help
