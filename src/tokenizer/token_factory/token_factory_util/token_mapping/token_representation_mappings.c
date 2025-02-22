@@ -14,7 +14,7 @@
         {TOKEN_LOWCASE_HEX, "%x"},
         {TOKEN_UPCASE_HEX, "%X"},
         {TOKEN_PERCENTAGE, "%%"}
-    };
+	};
     return token_representations;
 }
 
