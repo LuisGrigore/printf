@@ -1,4 +1,2 @@
-/home/luis/Desktop/printf/target/build/token_list/token_list.o: \
- /home/luis/Desktop/printf/src/token_list/token_list.c \
- /home/luis/Desktop/printf/src/token_list/token_list.h \
- /home/luis/Desktop/printf/src/token/token.h
+target/build/token_list/token_list.o: src/token_list/token_list.c \
+ src/token_list/token_list.h src/token/token.h

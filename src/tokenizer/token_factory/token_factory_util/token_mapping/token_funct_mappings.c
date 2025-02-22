@@ -18,7 +18,7 @@ static t_token_funct *get_functs()
     return token_functs;
 }
 
-funct get_funct(e_token_types type)
+funct get_funct_from_type(e_token_types type)
 {
 	unsigned long i;
 

@@ -1,10 +1,6 @@
-/home/luis/Desktop/printf/target/build/tokenizer/tokenizer.o: \
- /home/luis/Desktop/printf/src/tokenizer/tokenizer.c \
- /home/luis/Desktop/printf/src/tokenizer/tokenizer.h \
- /home/luis/Desktop/printf/src/token_list/token_list.h \
- /home/luis/Desktop/printf/src/token/token.h \
- /home/luis/Desktop/printf/src/tokenizer/string_separator/string_separator.h \
- /home/luis/Desktop/printf/src/tokenizer/token_factory/token_factory_util/token_mapping/token_mapping.h \
- /home/luis/Desktop/printf/src/tokenizer/token_factory/token_factory_util/token_types.h \
- /home/luis/Desktop/printf/src/tokenizer/token_factory/token_factory.h \
- /home/luis/Desktop/printf/externals/libc/libft.h
+target/build/tokenizer/tokenizer.o: src/tokenizer/tokenizer.c \
+ src/tokenizer/tokenizer.h src/token_list/token_list.h src/token/token.h \
+ src/tokenizer/string_separator/string_separator.h \
+ src/tokenizer/token_factory/token_factory_util/token_mapping/token_mapping.h \
+ src/tokenizer/token_factory/token_factory_util/token_types.h \
+ src/tokenizer/token_factory/token_factory.h externals/libc/libft.h
