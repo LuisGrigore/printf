@@ -22,6 +22,6 @@ typedef struct t_token_funct
 	funct funct;
 } t_token_funct;
 
-/*t_token_funct *get_functs();*/
+t_token_funct *get_functs();
 funct get_funct_from_type(e_token_types type);
 #endif

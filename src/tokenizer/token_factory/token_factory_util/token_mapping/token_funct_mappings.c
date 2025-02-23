@@ -2,7 +2,7 @@
 #include "token_util_functs.h"
 #include <stdlib.h>
 
-static t_token_funct *get_functs()
+t_token_funct *get_functs()
 {
     static t_token_funct token_functs[] = {
 		{TOKEN_CHAR, &print_char},
@@ -27,6 +27,7 @@ funct get_funct_from_type(e_token_types type)
 	{
 		if(type == get_functs()[i].token_type)
 			return (get_functs()[i].funct);
+		i++;
 	}
 	return (NULL);
 }

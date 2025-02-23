@@ -40,6 +40,7 @@ e_token_types get_type_from_representation(char *representation)
 		current_representation = get_representations()[i].str_representation;
 		if(ft_strncmp(current_representation, representation, ft_strlen(current_representation)) == 0)
 			return (get_representations()[i].token_type);
+		i++;
 	}
 	if(is_print_str(representation))
 	{
