@@ -22,7 +22,8 @@ void test_tokenizer(int i, ...)
 	start_unit_test();
 	assert_not_null(tokens);
 	assert_equal_str((char *)current->token->value, c);
-	assert_equal_str((char *)current->next->token->value, b);
+//TODO::
+	assert_equal_num(*((double *)current->next->token->value), *((double *)20));
 	assert_equal_str((char *)current->next->next->token->value, a);
 }
 

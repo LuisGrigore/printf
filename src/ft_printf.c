@@ -3,7 +3,7 @@
 #include "parser.h"
 #include "tokenizer.h"
 
-int ft_printf(char const *str, ...)
+int ft_printf(char const *str, void *a, ...)
 {
 	va_list args;
     va_start(args, END_ARGS);
