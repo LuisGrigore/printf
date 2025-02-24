@@ -1,9 +1,17 @@
-#ifndef FT_PRINTF
-#	define FT_PRINTF
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/24 17:29:43 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/24 17:36:35 by lgrigore         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef END_ARGS
-#	define END_ARGS (void*)0
-#endif
+#ifndef FT_PRINTF
+# define FT_PRINTF
 
 int	ft_printf(char const *format, ...);
 
