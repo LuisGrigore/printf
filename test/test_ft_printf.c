@@ -6,7 +6,7 @@
 
 void test_ft_printf_with_dec()
 {
-	double d = 20.12030;
+	int d = 20;
 	char ft_printf_buff[BUFF_SIZE] = {0};
 	char printf_buff[BUFF_SIZE] = {0};
 	char *str = "HOLA %d";

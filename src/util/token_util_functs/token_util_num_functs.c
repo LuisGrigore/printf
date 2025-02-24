@@ -6,43 +6,53 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:50 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/24 17:48:22 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/24 18:03:30 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "token_util_functs.h"
 #include "puthex_with_charset.h"
 #include "precisions_config.h"
+#include "max_values_config.h"
 #include "file_desc_config.h"
 #include <stdio.h>
 #include "libft.h"
 
+static int	ft_putchar(int c)
+{
+	return (write (STDOUT_FD, &c, 1));
+}
+
+
+static int	ft_putnbr(int n)
+{
+	unsigned int	i;
+	char *str;
+
+	i = 0;
+	if (n == INT_MIN_VAL)
+	{
+		str = ft_itoa(INT_MIN_VAL);
+		return (write(STDOUT_FD, str, ft_strlen(str)));
+	}
+	if (n < 0)
+	{
+		i += ft_putchar(NEGATIVE_SYMBOL);
+		n *= -1;
+	}
+	if (n > 9)
+	{
+		i += ft_putnbr(n / 10);
+		i += ft_putchar(n % 10 + '0');
+	}
+	else
+		i += ft_putchar(n + '0');
+	return (i);
+}
+
 int	print_dec(va_list args)
 {
-	int		len;
-	double	num;
-	int		integer;
-	double	decimal;
-
-	len = 0;
-	num = va_arg(args, double);
-	if (num < 0)
-	{
-		ft_putchar_fd(NEGATIVE_SYMBOL, STDOUT_FD);
-		len++;
-		num = -num;
-	}
-	integer = (int)num;
-	decimal = num - integer;
-	ft_putnbr_fd(integer, STDOUT_FD);
-	ft_putchar_fd(FLOATING_POINT_SYMBOL, STDOUT_FD);
-	len++;
-	for (int i = 0; i < DOUBLE_PRECISION; i++)
-	{
-		decimal *= 10;
-	}
-	ft_putnbr_fd((int)(decimal + 0.5), STDOUT_FD);
-	return (len);
+	return (ft_putnbr(va_arg(args, int)));
 }
 
 int	print_int(va_list args)
