@@ -42,9 +42,5 @@ e_token_types get_type_from_representation(char *representation)
 			return (get_representations()[i].token_type);
 		i++;
 	}
-	if(is_print_str(representation))
-	{
-		return (TOKEN_STR);
-	}
-	return (PLAIN_TEXT);
+	return (NONE);
 }

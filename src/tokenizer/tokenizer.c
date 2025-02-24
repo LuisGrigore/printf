@@ -11,21 +11,19 @@ t_token_list *tokenize(char *str, va_list args)
     t_token *new_token;
 
 	token_list = create_token_list();
-    /*if (!token_list)
-        return (NULL);*/
 	
 	str_list = separate_str(str);
 	while(str_list)
 	{
-		if(get_type_from_representation(str_list->value) == PLAIN_TEXT)
+		if(get_type_from_representation(str_list->value) != NONE)
 		{
 			arg = va_arg(args, void*);
-			if (arg == END_ARGS)
-				break;
+			/*if (arg == END_ARGS)
+				break;*/
 			new_token = token_factory(str_list->value, arg);
 		}
 		else
-			new_token = token_factory(str_list->value, NULL);
+			new_token = token_factory("%s", str_list->value);
 		add_token_to_list(token_list,new_token);
 		str_list = str_list->next;
 	}

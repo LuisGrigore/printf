@@ -11,6 +11,6 @@ typedef enum
 	TOKEN_LOWCASE_HEX,
 	TOKEN_UPCASE_HEX,
 	TOKEN_PERCENTAGE,
-	PLAIN_TEXT
+	NONE
 } e_token_types;
 #endif
