@@ -1,6 +1,10 @@
 #ifndef CHARSETS_CONFIG
 # define CHARSETS_CONFIG
 
+#ifndef FORMAT_CHAR
+# define FORMAT_CHAR '%'
+#endif
+
 #ifndef HEX_UPPCASE_CHARSET
 # define HEX_UPPCASE_CHARSET "0123456789ABCDEF"
 #endif

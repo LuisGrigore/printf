@@ -5,5 +5,6 @@
 #	define END_ARGS (void*)0
 #endif
 
-int ft_printf(char const *,void *a, ...);
+int	ft_printf(char const *format, ...);
+
 #endif

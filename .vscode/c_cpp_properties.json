@@ -12,7 +12,13 @@
                 "${workspaceFolder}/src/tokenizer/string_separator",
                 "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_functs/token_util_functs",
                 "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_util_functs",
-                "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_util_functs/puthex_with_charset"
+                "${workspaceFolder}/src/tokenizer/token_factory/token_factory_util/token_mapping/token_util_functs/puthex_with_charset",
+                "${workspaceFolder}/test/test_utils",
+                "${workspaceFolder}/test/test_utils",
+                "${workspaceFolder}/test/test_utils",
+                "${workspaceFolder}/src/util/token_util_functs",
+                "${workspaceFolder}/src/util/token_util_functs/puthex_with_charset",
+                "${workspaceFolder}/test/test_utils"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

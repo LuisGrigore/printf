@@ -1,13 +1,34 @@
 #include "ft_printf.h"
 #include <stdarg.h>
-#include "parser.h"
-#include "tokenizer.h"
+#include "symbols_config.h"
+#include "format_factory.h"
+#include "libft.h"
+#include "file_desc_config.h"
 
-int ft_printf(char const *str, void *a, ...)
+
+int	ft_printf(char const *format, ...)
 {
-	va_list args;
-    va_start(args, END_ARGS);
-	t_token_list *list = tokenize((char *)str,args);
-	parse(list);
-	return (1);
+	va_list	args;
+	int		i;
+	int		length;
+	char *str;
+
+	va_start(args, format);
+	i = 0;
+	length = 0;
+	str = (char *) format;
+	while (format[i])
+	{
+		if (format[i] == FORMAT_CHAR)
+		{
+			length += format_factory(&str[i], args);
+			i++;
+		}
+		else
+			ft_putchar_fd(format[i], STDOUT_FD);
+			length ++;
+			i++;
+	}
+	va_end(args);
+	return (length);
 }
