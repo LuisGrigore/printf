@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   print_nbr.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:29:43 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/24 17:36:35 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/25 18:21:27 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/25 18:21:28 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF
-# define FT_PRINTF
+#ifndef PRINT_NBR_H
+# define PRINT_NBR_H
 
-int	ft_printf(char const *format, ...);
+int	print_nbr(long n);
 
 #endif

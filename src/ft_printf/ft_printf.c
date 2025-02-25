@@ -6,39 +6,59 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:29:34 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/24 17:35:37 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/25 19:28:16 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdarg.h>
 #include "symbols_config.h"
-#include "format_factory.h"
+#include "format_funct_mapping.h"
 #include "libft.h"
 #include "file_desc_config.h"
 
-int	ft_printf(char const *format, ...)
+static int	print_format(const char *format_str, int *length, va_list args)
+{
+	char	*format;
+	t_funct	funct;
+
+	format = format_factory((char *)format_str);
+	if (format)
+	{
+		funct = funct_factory(format);
+		*length += funct(args);
+	}
+	return (ft_strlen(format));
+}
+
+static int	print_char(const char *format_str, int *length)
+{
+	ft_putchar_fd(*format_str, STDOUT_FD);
+	*length = *length + 1;
+	return (1);
+}
+
+static int	print(char const *format_str, va_list args, int *length)
+{
+	char	*format;
+
+	if (*format_str == FORMAT_CHAR)
+	{
+		return (print_format(format_str, length, args));
+	}
+	return (print_char(format_str, length));
+}
+
+int	ft_printf(char const *format_str, ...)
 {
 	va_list	args;
-	int		i;
 	int		length;
-	char	*str;
 
-	va_start(args, format);
-	i = 0;
+	va_start(args, format_str);
 	length = 0;
-	str = (char *)format;
-	while (format[i])
+	while (*format_str)
 	{
-		if (format[i] == FORMAT_CHAR)
-		{
-			length += format_factory(&str[i], args);
-			i++;
-		}
-		else
-			ft_putchar_fd(format[i], STDOUT_FD);
-		length++;
-		i++;
+		format_str += print(format_str, args, &length);
 	}
 	va_end(args);
 	return (length);

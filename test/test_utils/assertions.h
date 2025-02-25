@@ -86,34 +86,37 @@ do { \
     } \
 } while (0);
 
-#define capture_output(buffer, size, output, func_call) \
+#define CAPTURE_OUTPUT(buffer, size, output, retval, func_call) \
 do { \
     int pipefd[2]; \
     if (pipe(pipefd) == -1) { \
         perror("pipe falló"); \
         exit(1); \
     } \
-    \
     fflush(output); \
     pid_t pid = fork(); \
     if (pid == -1) { \
         perror("fork falló"); \
         exit(1); \
     } \
-    if (pid == 0) {\
-        close(pipefd[0]);\
-        dup2(pipefd[1], fileno(output));\
-        close(pipefd[1]); \
-        func_call;\
-        fflush(output); \
-        exit(0); \
-    } else {\
-        close(pipefd[1]);\
-        read(pipefd[0], buffer, size - 1);\
+    if (pid == 0) { \
         close(pipefd[0]); \
-        wait(NULL);\
+        dup2(pipefd[1], fileno(output)); \
+        close(pipefd[1]); \
+        retval = func_call; \
+        fflush(output); \
+        exit(retval); \
+    } else { \
+        close(pipefd[1]); \
+        ssize_t bytes_read = read(pipefd[0], buffer, size - 1); \
+        buffer[(bytes_read > 0) ? bytes_read : 0] = '\0'; \
+        close(pipefd[0]); \
+        int status; \
+        waitpid(pid, &status, 0); \
+        retval = WIFEXITED(status) ? WEXITSTATUS(status) : -1; \
     } \
 } while (0);
+
 
 #define start_unit_test() \
     printf("\n%s: ", __func__);

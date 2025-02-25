@@ -18,6 +18,10 @@
                 "${workspaceFolder}/test/test_utils",
                 "${workspaceFolder}/src/util/token_util_functs",
                 "${workspaceFolder}/src/util/token_util_functs/puthex_with_charset",
+                "${workspaceFolder}/test/test_utils",
+                "${workspaceFolder}/src/functs/print_hex",
+                "${workspaceFolder}/src/functs/print_char",
+                "${workspaceFolder}/src/functs/print_str",
                 "${workspaceFolder}/test/test_utils"
             ],
             "defines": [],

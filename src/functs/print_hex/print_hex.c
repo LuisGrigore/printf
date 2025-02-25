@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   puthex_with_charset.c                              :+:      :+:    :+:   */
+/*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:01 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/24 17:51:19 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/25 17:28:11 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/25 18:21:15 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "puthex_with_charset.h"
-#include "libft.h"
+#include "print_hex.h"
+#include "print_char.h"
+#include "print_str.h"
 
-int	puhex_with_charset(unsigned long num, int fd, char *charset)
+int	print_hex(unsigned long num, char *charset)
 {
 	char	buffer[16];
 	char	temp;
@@ -21,9 +22,8 @@ int	puhex_with_charset(unsigned long num, int fd, char *charset)
 
 	i = 0;
 	if (num == 0)
-	{
-		ft_putchar_fd(charset[0], fd);
-		return (1);
+	{		
+		return (print_char(charset[0]));
 	}
 	while (num > 0)
 	{
@@ -37,6 +37,5 @@ int	puhex_with_charset(unsigned long num, int fd, char *charset)
 		buffer[j] = buffer[i - j - 1];
 		buffer[i - j - 1] = temp;
 	}
-	ft_putstr_fd(buffer, fd);
-	return (ft_strlen(buffer));
+	return (print_str(buffer));
 }
