@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/04 14:20:51 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/04 14:24:24 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "libft.h"
+#include <unistd.h>
 
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+void	ft_putchar_fd(char c, int fd)
 {
-	return (print_char(va_arg(args, int)));
-}
-
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	write(fd, &c, 1);
 }

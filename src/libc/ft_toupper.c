@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/01/31 13:24:02 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/01/31 14:01:03 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
-
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+int	ft_toupper(int c)
 {
-	return (print_char(va_arg(args, int)));
-}
-
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 'a' + 'A');
+	}
+	return (c);
 }

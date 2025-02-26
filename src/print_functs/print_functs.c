@@ -1,10 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_functs.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/26 18:41:29 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/26 18:51:38 by lgrigore         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "print_functs.h"
-#include "file_desc_config.h"
+
 #include <unistd.h>
 
 #include "symbols_config.h"
 #include "max_values_config.h"
+#include "file_desc_config.h"
 #include "libft.h"
+#include "reverse_buff.h"
 
 int	print_char(char c)
 {
@@ -15,10 +29,12 @@ int	print_str(char *str)
 {
 	int	length;
 
+	if (!str)
+		return (print_str(NULL_STR_SYMBOL));
 	length = 0;
 	if (!str)
 		return (0);
-	while(*str)
+	while (*str)
 	{
 		length += print_char(*str);
 		str++;
@@ -26,15 +42,34 @@ int	print_str(char *str)
 	return (length);
 }
 
-int	print_hex(unsigned long num, char *charset)
+int	print_ptr(uintptr_t num)
 {
 	char	buffer[16];
-	char	temp;
 	int		i;
 
 	i = 0;
 	if (num == 0)
-	{		
+	{
+		return (print_char(HEX_LOWCASE_CHARSET[0]));
+	}
+	while (num > 0)
+	{
+		buffer[i++] = HEX_LOWCASE_CHARSET[num % 16];
+		num /= 16;
+	}
+	buffer[i] = '\0';
+	reverse_buffer(buffer, i);
+	return (print_str(buffer));
+}
+
+int	print_hex(unsigned int num, char *charset)
+{
+	char	buffer[16];
+	int		i;
+
+	i = 0;
+	if (num == 0)
+	{
 		return (print_char(charset[0]));
 	}
 	while (num > 0)
@@ -43,12 +78,7 @@ int	print_hex(unsigned long num, char *charset)
 		num /= 16;
 	}
 	buffer[i] = '\0';
-	for (int j = 0; j < i / 2; j++)
-	{
-		temp = buffer[j];
-		buffer[j] = buffer[i - j - 1];
-		buffer[i - j - 1] = temp;
-	}
+	reverse_buffer(buffer, i);
 	return (print_str(buffer));
 }
 
@@ -58,7 +88,7 @@ int	print_nbr(long num)
 	long			n;
 
 	i = 0;
-	n = (long) num;
+	n = (long)num;
 	if (n == INT_MIN_VAL)
 		return (print_str(ft_itoa(INT_MIN_VAL)));
 	if (n < 0)

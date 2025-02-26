@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/01/31 15:11:55 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/01/31 15:19:12 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "libft.h"
 
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	return (print_char(va_arg(args, int)));
-}
+	const unsigned char	*ptr1 = (const unsigned char *)s1;
+	const unsigned char	*ptr2 = (const unsigned char *)s2;
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	while (n-- > 0)
+	{
+		if (*ptr1 != *ptr2)
+		{
+			return (*ptr1 - *ptr2);
+		}
+		ptr1++;
+		ptr2++;
+	}
+	return (0);
 }

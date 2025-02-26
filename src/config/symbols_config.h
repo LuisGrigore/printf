@@ -6,12 +6,20 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:30:14 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/25 17:32:41 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 16:25:09 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SYMBOLS_CONFIG_H
 # define SYMBOLS_CONFIG_H
+
+# ifndef NULL_STR_SYMBOL
+#  define NULL_STR_SYMBOL "(null)"
+# endif
+
+# ifndef NULL_PTR_SYMBOL
+#  define NULL_PTR_SYMBOL "(nil)"
+# endif
 
 # ifndef FORMAT_CHAR
 #  define FORMAT_CHAR '%'

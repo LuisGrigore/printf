@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:59 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/25 18:39:15 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:59:28 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_format_funct	*get_format_functs(void)
 	{"%u", print_unsigned_int_args},
 	{"%x", print_lowcase_hex_args},
 	{"%X", print_uppercase_hex_args},
-	{"%%", print_percentage_args},
+	{"%%", NULL},
 	{NULL, NULL}
 	};
 

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   reverse_buff.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/26 18:45:51 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/26 18:51:03 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "reverse_buff.h"
 
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+void	reverse_buffer(char *buffer, int length)
 {
-	return (print_char(va_arg(args, int)));
-}
+	char	temp;
+	int		j;
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	j = 0;
+	while (j < length / 2)
+	{
+		temp = buffer[j];
+		buffer[j] = buffer[length - j - 1];
+		buffer[length - j - 1] = temp;
+		j++;
+	}
 }

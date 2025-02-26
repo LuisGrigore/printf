@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/01/31 13:12:18 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/05 21:11:09 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "libft.h"
 
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	return (print_char(va_arg(args, int)));
-}
+	size_t		i;
+	char		*d;
+	const char	*s;
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	if (dest == NULL && src == NULL && n != 0)
+	{
+		return (dest);
+	}
+	d = (char *)dest;
+	s = (const char *)src;
+	i = 0;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }

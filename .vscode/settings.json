@@ -22,6 +22,8 @@
 		"token_util_functs.h": "c",
 		"token.h": "c",
 		"puthex_with_charset.h": "c",
-		"file_desc_config.h": "c"
+		"file_desc_config.h": "c",
+		"max_values_config.h": "c",
+		"symbols_config.h": "c"
 	}
 }

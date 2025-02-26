@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:29:34 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 01:55:33 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 18:41:16 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,15 @@ static int	print_format(const char *format_str, int *length, va_list args)
 	format = format_factory((char *)format_str);
 	if (format)
 	{
-		funct = funct_factory(format);
-		*length += funct(args);
+		if (ft_strncmp(format, "%%", 2) == 0)
+		{
+			*length += print_char(PPERCENTAGE_SYMBOL);
+		}
+		else
+		{
+			funct = funct_factory(format);
+			*length += funct(args);
+		}
 	}
 	return (ft_strlen(format));
 }

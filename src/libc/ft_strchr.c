@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:25 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/01/31 14:04:00 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/03 13:02:16 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "libft.h"
 
-#include "print_functs.h"
-
-int	print_char_args(va_list args)
+char	*ft_strchr(const char *s, int c)
 {
-	return (print_char(va_arg(args, int)));
-}
+	int		i;
+	char	*str;
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
+	i = 0;
+	str = (char *)s;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (unsigned char)c)
+		{
+			return (&str[i]);
+		}
+		i++;
+	}
+	if (s[i] == (unsigned char)c)
+	{
+		return (&str[i]);
+	}
+	return (NULL);
 }
