@@ -6,12 +6,11 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:50 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/25 18:39:15 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 01:52:25 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print_nbr.h"
-#include "print_hex.h"
+#include "print_functs.h"
 
 #include "functs.h"
 

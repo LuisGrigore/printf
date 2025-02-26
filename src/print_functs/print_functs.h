@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_str.h                                        :+:      :+:    :+:   */
+/*   print_functs.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/25 17:53:49 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/25 18:21:01 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/26 01:49:48 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/26 01:50:46 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINT_STR_H
-# define PRINT_STR_H
+#ifndef PRINT_FUNCTS_H
+# define PRINT_FUNCTS_H
 
+# include "symbols_config.h"
+
+int	print_hex(unsigned long num, char *charset);
+int	print_char(char c);
 int	print_str(char *str);
+int	print_nbr(long n);
 
 #endif

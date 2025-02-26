@@ -22,7 +22,11 @@
                 "${workspaceFolder}/src/functs/print_hex",
                 "${workspaceFolder}/src/functs/print_char",
                 "${workspaceFolder}/src/functs/print_str",
-                "${workspaceFolder}/test/test_utils"
+                "${workspaceFolder}/test/test_utils",
+                "${workspaceFolder}/src/print_functs/print_char",
+                "${workspaceFolder}/src/print_functs/print_str",
+                "${workspaceFolder}/src/print_functs/print_hex",
+                "${workspaceFolder}/src/print_functs/print_nbr"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
