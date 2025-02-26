@@ -9,6 +9,6 @@
 
 int main(int argc, char const *argv[])
 {
-	print_hex(0, HEX_LOWCASE_CHARSET);
+	ft_printf("%%", "aaa");
 	return 0;
 }

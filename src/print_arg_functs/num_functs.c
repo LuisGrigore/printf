@@ -6,13 +6,12 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:50 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:37:22 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 20:08:44 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print_functs.h"
-
-#include "functs.h"
+#include "print_arg_functs.h"
 
 int	print_dec_args(va_list args)
 {

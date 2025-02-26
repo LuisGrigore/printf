@@ -6,11 +6,11 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:33 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:39:45 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 20:08:38 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "functs.h"
+#include "print_arg_functs.h"
 #include "symbols_config.h"
 
 #include "print_functs.h"

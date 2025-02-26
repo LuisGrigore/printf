@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   print_special_functs.h                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 20:08:34 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/26 19:29:13 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/26 20:13:06 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print_arg_functs.h"
-#include "print_functs.h"
+#ifndef PRINT_SPECIAL_FUNCTS_H
+# define PRINT_SPECIAL_FUNCTS_H
 
-int	print_char_args(va_list args)
-{
-	return (print_char(va_arg(args, int)));
-}
+typedef int	(*t_special_funct)(void);
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
-}
+int	print_percentage(void);
+
+#endif

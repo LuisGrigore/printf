@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   chars_functs.c                                     :+:      :+:    :+:   */
+/*   print_special_functs.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 17:28:26 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 20:08:34 by lgrigore         ###   ########.fr       */
+/*   Created: 2025/02/26 19:29:21 by lgrigore          #+#    #+#             */
+/*   Updated: 2025/02/26 19:56:36 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print_arg_functs.h"
-#include "print_functs.h"
+#ifndef PRINT_SPECIAL_FUNCTS_H
+# define PRINT_SPECIAL_FUNCTS_H
 
-int	print_char_args(va_list args)
+# include "print_special_functs.h"
+# include "print_functs.h"
+# include "symbols_config.h"
+
+int	print_percentage(void)
 {
-	return (print_char(va_arg(args, int)));
+	return (print_char(PPERCENTAGE_SYMBOL));
 }
 
-int	print_str_args(va_list args)
-{
-	return (print_str(va_arg(args, char *)));
-}
+#endif

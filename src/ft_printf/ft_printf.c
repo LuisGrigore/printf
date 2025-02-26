@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:29:34 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:41:16 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 19:53:04 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,25 @@
 
 static int	print_format(const char *format_str, int *length, va_list args)
 {
-	char	*format;
-	t_funct	funct;
+	char			*format;
+	t_funct			funct;
+	t_special_funct	special_funct;
 
 	format = format_factory((char *)format_str);
 	if (format)
 	{
-		if (ft_strncmp(format, "%%", 2) == 0)
-		{
-			*length += print_char(PPERCENTAGE_SYMBOL);
-		}
+		funct = funct_factory(format);
+		if (funct)
+			*length += funct(args);
 		else
 		{
-			funct = funct_factory(format);
-			*length += funct(args);
+			special_funct = special_funct_factory(format);
+			if (special_funct)
+				*length += special_funct();
 		}
+		return (ft_strlen(format));
 	}
-	return (ft_strlen(format));
+	return (0);
 }
 
 static int	print_one_char(const char *format_str, int *length)

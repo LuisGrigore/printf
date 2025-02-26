@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   functs.h                                           :+:      :+:    :+:   */
+/*   print_arg_functs.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:42 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:01:03 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 20:12:41 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FUNCTS_H
-# define FUNCTS_H
+#ifndef PRINT_ARG_FUNCTS_H
+# define PRINT_ARG_FUNCTS_H
 
 # include <stdarg.h>
+
+typedef int	(*t_funct)(va_list);
 
 // Num Functs
 int		print_dec_args(va_list args);
