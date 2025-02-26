@@ -6,13 +6,11 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:28:59 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 20:09:05 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:20:18 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "format_funct_mapping.h"
-#include "print_arg_functs.h"
-#include "print_special_functs.h"
 #include "libft.h"
 
 t_format_funct	*get_format_functs(void)

@@ -6,7 +6,7 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 17:29:34 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 19:53:04 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:20:49 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "symbols_config.h"
 #include "format_funct_mapping.h"
 #include "libft.h"
-#include "file_desc_config.h"
 #include "print_functs.h"
 
 static int	print_format(const char *format_str, int *length, va_list args)

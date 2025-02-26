@@ -6,15 +6,13 @@
 /*   By: lgrigore <lgrigore@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 18:41:29 by lgrigore          #+#    #+#             */
-/*   Updated: 2025/02/26 18:51:38 by lgrigore         ###   ########.fr       */
+/*   Updated: 2025/02/26 21:23:35 by lgrigore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "print_functs.h"
 
 #include <unistd.h>
-
-#include "symbols_config.h"
 #include "max_values_config.h"
 #include "file_desc_config.h"
 #include "libft.h"

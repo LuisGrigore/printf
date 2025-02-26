@@ -24,6 +24,8 @@
 		"puthex_with_charset.h": "c",
 		"file_desc_config.h": "c",
 		"max_values_config.h": "c",
-		"symbols_config.h": "c"
+		"symbols_config.h": "c",
+		"format_funct_mapping.h": "c",
+		"print_functs.h": "c"
 	}
 }
